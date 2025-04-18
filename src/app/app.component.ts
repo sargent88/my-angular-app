@@ -15,8 +15,8 @@ export class AppComponent {
   users = DUMMY_USERS;
   selectedUser: string | undefined;
 
-  get selectedUserName() {
-    return this.users.find(user => user.id === this.selectedUser)?.name;
+  get userInfo() {
+    return this.users.find(user => user.id === this.selectedUser);
   }
 
   selectUser(id: string) {

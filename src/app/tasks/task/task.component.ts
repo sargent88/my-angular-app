@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { Task } from './models/task.model';
 
 @Component({
   selector: 'app-task',
@@ -8,5 +9,5 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './task.component.css'
 })
 export class TaskComponent {
-
+  @Input() task!: Task;
 }

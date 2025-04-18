@@ -1,9 +1,9 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { User } from './models/user.model';
 // SIGNAL APPROACH
 // import { Component, input, output, computed, signal } from '@angular/core';
 
-interface User { id: string, name: string, avatar: string }
 @Component({
   selector: 'app-user',
   imports: [MatButtonModule],
