@@ -1,6 +1,14 @@
 <div>
-  <button (click)="selectRandomUser()">
-    <img [src]="imagePath" [alt]="name" />
-    <span>{{ name }}</span>
+  <button mat-fab extended (click)="showUserInfo()">
+    <img [src]="imagePath" [alt]="user.name" />
+    <span>{{ user.name }}</span>
   </button>
 </div>
+
+<!-- SIGNAL APPROACH
+<div>
+  <button (click)="showUserInfo()">
+    <img [src]="imagePath()" [alt]="user().name" />
+    <span>{{ user().name }}</span>
+  </button>
+</div> -->

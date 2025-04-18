@@ -1,29 +1,9 @@
 div {
+  display: flex;
+  justify-content: center;
   border-radius: 6px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-}
-
-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 8px;
-  background-color: #433352;
-  color: #c3b3d1;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-  width: 100%;
-  min-width: 160px;
-  text-align: left;
-}
-
-button:hover,
-button:active,
-.active {
-  background-color: #9965dd;
-  color: #150722;
 }
 
 img {
@@ -38,4 +18,14 @@ span {
   padding: 0;
   font-size: 13px;
   font-weight: normal;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
 }

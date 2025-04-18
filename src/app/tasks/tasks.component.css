@@ -1,0 +1,48 @@
+#tasks {
+  padding: 16px;
+  border-radius: 8px;
+  max-height: 60vh;
+  overflow: auto;
+  background-color: #3a2c54;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  gap: 16px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 14.4px;
+  width: 60%;
+  text-wrap: balance;
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 16px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 50vh;
+  overflow: auto;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  menu {
+    width: auto;
+  }
+}

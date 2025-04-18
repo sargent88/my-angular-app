@@ -1,26 +1,33 @@
-import { Component, Input,  } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+// SIGNAL APPROACH
+// import { Component, input, output, computed, signal } from '@angular/core';
 
+interface User { id: string, name: string, avatar: string }
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [MatButtonModule],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  @Input({required: true}) avatar!: string;
-  @Input({required: true}) name!: string;
+  @Input({required: true}) user!: User;
+  @Output() userInfo = new EventEmitter();
 
   // SIGNAL APPROACH
-  // avatar = input.required<string>();
-  // name = input.required<string>();
+  // user = input.required<User>();
+  // userInfo = output<string>();
 
-  // imagePath = computed(() => `users/${this.avatar()}`)
+  // imagePath = computed(() => `users/${this.user().avatar}`)
 
   get imagePath() {
-    return `users/${this.avatar}`
+    return `users/${this.user.avatar}`
   }
 
 
-  selectRandomUser() {
+  showUserInfo() {
+    // SIGNAL APPROACH
+    // this.userInfo.emit(this.id());
+    this.userInfo.emit(this.user.id);
   }
 }
